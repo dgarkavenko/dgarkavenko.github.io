@@ -1,1 +1,98 @@
-Hellow World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptogram Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .cryptogram-container {
+            margin: 20px 0;
+            font-size: 20px;
+            text-transform: uppercase;
+            max-width: 600px;
+        }
+        .cryptogram-letter {
+            display: inline-block;
+            text-align: center;
+            margin: 0 2px;  /* Add margin between letters */
+            width: 20px;
+            color: darkblue;
+        }
+        .cryptogram-letter .guess {
+            display: block;
+            border-bottom: 1px solid #333;
+            cursor: pointer;
+            height: 25px;
+            color: darkgray;
+        }
+        .cryptogram-letter span {
+            display: block;
+            height: 25px;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        .keyboard {
+            margin-top: 20px;
+        }
+        .keyboard button {
+            font-size: 18px;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .paragraph {
+            margin-bottom: 20px;
+        }
+        .word {
+            display: inline-block;   /* Keep each word on one line */
+            white-space: nowrap;     /* Prevent word from breaking */
+            margin-right: 10px;      /* Space between words */
+        }
+    </style>
+</head>
+<body>
+    <h1>Cryptogram Puzzle</h1>
+
+    <div class="cryptogram-container" id="cryptogram">
+        <!-- The cryptogram will be displayed here -->
+    </div>
+
+    <div class="keyboard">
+        <!-- QWERTY Keyboard for guesses -->
+        <button>Q</button>
+        <button>W</button>
+        <button>E</button>
+        <button>R</button>
+        <button>T</button>
+        <button>Y</button>
+        <button>U</button>
+        <button>I</button>
+        <button>O</button>
+        <button>P</button>
+        <button>A</button>
+        <button>S</button>
+        <button>D</button>
+        <button>F</button>
+        <button>G</button>
+        <button>H</button>
+        <button>J</button>
+        <button>K</button>
+        <button>L</button>
+        <button>Z</button>
+        <button>X</button>
+        <button>C</button>
+        <button>V</button>
+        <button>B</button>
+        <button>N</button>
+        <button>M</button>
+        <button>_</button>
+    </div>
+
+    <script src="cryptogram.js"></script>
+</body>
+</html>
