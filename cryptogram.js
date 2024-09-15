@@ -1,7 +1,7 @@
 // cryptogram.js
 
 const secretPhrase = `
-Progress has been made. The transplants are working. The subject is seeing beyond the veil — what they perceive is extraordinary.
+Progress has been made — the transplants are working. The subject is seeing beyond the veil — what they perceive is extraordinary.
 However, their mind is fragile and unstable. Time is of the essence and we must immediately assemble the Inner Circle.
 The breakthrough is imminent, but demands swift action.
 Dr. Varrick Sawn`.toUpperCase();
