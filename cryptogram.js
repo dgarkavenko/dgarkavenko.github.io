@@ -2,7 +2,7 @@
 
 const secretPhrase = `
 Progress has been made. The transplants are working. The subject is seeing beyond the veil — what they perceive is extraordinary.
-However, their mind is fragile and unstable. Time is of the essence we must immediately assemble the Inner Circle.
+However, their mind is fragile and unstable. Time is of the essence and we must immediately assemble the Inner Circle.
 The breakthrough is imminent, but demands swift action.
 Dr. Varrick Sawn`.toUpperCase();
 
@@ -105,7 +105,6 @@ function replaceLetter(guessedLetter) {
         selectedLetter = null; // Reset after guess
         clearHighlights();
     } else {
-        alert("Please select a cryptogram letter first.");
     }
 }
 
@@ -129,7 +128,6 @@ function clearGuess() {
         selectedLetter = null; // Reset after clearing
         clearHighlights();
     } else {
-        alert("Please select a cryptogram letter first.");
     }
 }
 
@@ -138,6 +136,17 @@ function handleKeyboardInput(e) {
     const guessedLetter = e.target.textContent;
     replaceLetter(guessedLetter);
 }
+
+// Keyboard input handler
+function handleKeyboardInput2(e) {
+    const key = e.key.toUpperCase();  // Get the key that was pressed and make it uppercase
+    if (alphabet.includes(key)) {  // Only handle unused letters
+        replaceLetter(key);           // Use the key as the guessed letter
+    }
+}
+
+document.addEventListener('keydown', handleKeyboardInput2);
+
 
 // Generate the cipher and encode the phrase
 generateCipher();
