@@ -1,0 +1,150 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background-color: #0b0d13;
+  color: #f5f7ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0b0d13;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: rgba(12, 14, 20, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 14px;
+}
+
+.top-bar .title {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.top-bar .room,
+.top-bar .status {
+  opacity: 0.8;
+}
+
+.stage {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+.join-panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(18, 20, 30, 0.9);
+  padding: 28px 32px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  width: min(360px, 90vw);
+  text-align: center;
+}
+
+.join-panel h1 {
+  margin: 0 0 16px;
+  font-size: 22px;
+}
+
+.join-panel label {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  opacity: 0.75;
+  margin-bottom: 6px;
+}
+
+.join-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.join-panel input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #0d101a;
+  color: #f5f7ff;
+}
+
+.join-panel button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #5d6cff;
+  color: #0b0d13;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.join-panel button:hover {
+  filter: brightness(1.1);
+}
+
+.join-panel .hint {
+  margin-top: 14px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.cursor {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.cursor-label {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  font-size: 12px;
+  color: #f5f7ff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status.connected {
+  color: #78ffb0;
+}
+
+.status.disconnected {
+  color: #ff7a7a;
+}

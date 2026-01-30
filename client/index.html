@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shared Cursor Room</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="top-bar">
+        <div class="title">Shared Cursor</div>
+        <div class="room">Room: <span id="room-code">lobby</span></div>
+        <div class="status" id="status">Not connected</div>
+      </header>
+
+      <main id="stage" class="stage">
+        <div id="join-panel" class="join-panel">
+          <h1>Join the room</h1>
+          <label for="name">Display name</label>
+          <div class="join-controls">
+            <input id="name" type="text" maxlength="20" placeholder="e.g. Alex" />
+            <button id="join-button">Join</button>
+          </div>
+          <p class="hint">Tip: Share the page URL to invite others.</p>
+        </div>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
